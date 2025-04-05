@@ -160,12 +160,12 @@ const App = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("data.json");
+        const response = await axios.get("/data.json");
         if (Array.isArray(response.data)) {
           setCountries(response.data);
           localStorage.setItem("countriesData", JSON.stringify(response.data)); // Cache the data
         } else {
-          setError("Refresh to display data");
+          setError("Data is not an array");
           console.error("Data is not an array");
         }
       } catch (err) {
