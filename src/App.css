@@ -1,0 +1,364 @@
+
+/* Light Theme */
+/* Default (Light Mode) */
+.app {
+  transition: background 0.3s ease-in-out;
+}
+
+.app.light {
+  background: whitesmoke;
+  color: black;
+}
+
+.app.light header {
+  background-color: white;
+  border-bottom: 2px solid rgb(230, 230, 230); /* Light gray border */
+}
+
+/* Dark Mode */
+.app.dark {
+  background-color: rgb(32, 44, 54);
+  color: white;
+}
+
+.app.dark header {
+  background-color: rgb(43, 57, 69);
+  border-bottom: 2px solid rgb(15, 21, 29); /* Darker border */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px 0px 0px;
+}
+.app.light h1,
+.app.dark h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+h1{
+  margin-left: 40px;
+  text-decoration:none;
+}
+.app.light select{
+  margin-top: 30px;
+  height: 40px;
+  width: 10rem;
+  float: right;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  background: white;
+  margin-right: 35px;
+  
+}
+.app.dark select{
+  margin-top: 30px;
+  height: 40px;
+  width: 10rem;
+  float: right;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  background-color: rgb(43, 57, 69);
+  margin-right: 35px;
+}
+.app.light input{
+  margin-top: 30px;
+  width: 18rem;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-indent: 30px;
+  background: white;
+  margin-left: 35px;
+}
+.app.dark input{
+  margin-top: 30px;
+  width: 18rem;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-indent: 30px;
+  background-color: rgb(43, 57, 69);
+  margin-right: 35px;
+  margin-left: 35px;
+
+}
+
+
+
+.app.dark button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(43, 57, 69);
+  border: none;
+  margin-right: 40px;
+}
+.app.light button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  margin-right: 40px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Country Card Styling */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: inherit;
+  color: inherit;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 15px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .app.light select,
+  .app.dark select {
+    width: 8rem; /* Reduce width */
+    margin-right: 20px;
+  }
+
+  .app.light input,
+  .app.dark input {
+    width: 16rem; /* Reduce input width */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app.light select,
+  .app.dark select {
+    width: 100%; /* Full width */
+    float: none;
+    margin: 10px auto; /* Center the element */
+  }
+  @media screen and (max-width: 1024px) {
+    .app.light h1,
+    .app.dark h1 {
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+  
+  /* Small screens */
+  @media screen and (max-width: 768px) {
+    .app.light h1,
+    .app.dark h1 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  
+  /* Extra small screens */
+  @media screen and (max-width: 480px) {
+    .app.light h1,
+    .app.dark h1 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  .app.light input,
+  .app.dark input {
+    width: 100%; /* Full width */
+    margin-left: 0;
+    text-indent: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app.light select,
+  .app.dark select {
+    width: 90%; /* Slightly smaller than full width */
+    margin: 10px auto;
+    display: block;
+  }
+    .app.light input,
+  .app.dark input {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+}
+  
+
+
+
+
+.country-detail {
+  padding: 3rem 5rem;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 4rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button.light {
+  background-color: #ffffff;
+  color: #111517;
+}
+
+.back-button.dark {
+  background-color: #2b3945;
+  color: #ffffff;
+}
+
+.country-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.country-flag {
+  width: 100%;
+}
+
+.country-flag img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.country-info h1 {
+  font-size: 2rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 800;
+}
+
+.details-grid {
+  display: flex;
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+
+.details-column {
+  flex: 1;
+}
+
+.details-column p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.details-column p strong {
+  font-weight: 600;
+}
+
+.border-countries {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.border-countries h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.border-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.border-link {
+  padding: 0.3rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.border-link.light {
+  background-color: #ffffff;
+  color: #111517;
+}
+
+.border-link.dark {
+  background-color: #2b3945;
+  color: #ffffff;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .country-detail {
+    padding: 2rem 1rem;
+  }
+
+  .back-button {
+    margin-bottom: 2.5rem;
+  }
+
+  .country-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .country-flag img {
+    max-width: 320px;
+  }
+
+  .country-info h1 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .details-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .border-countries {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .border-countries h3 {
+    margin-right: 0;
+  }
+}
