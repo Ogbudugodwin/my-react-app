@@ -180,7 +180,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/my-react-app">
+    <Router>
       <div className={`app ${theme}`}>
         <header className={`header ${theme}`}>
           <Link to="/" className="header-link">

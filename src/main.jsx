@@ -7,8 +7,6 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <ThemeProvider>
-   <BrowserRouter basename="/my-react-app">
       <App />
-    </BrowserRouter>
 </ThemeProvider>,
 )
